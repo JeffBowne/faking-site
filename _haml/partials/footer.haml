@@ -1,13 +1,1 @@
 .footer#footer
-
-  %h3.footer__heading ABOUT THIS SITE
-
-  .footer__page-details
-    %p
-      I built this site with Haml, Sass, jQuery, and Ruby - using partial file structure for both markup and stylesheets - utilizing BEM name-spacing and elements of ITCSS
-    %p
-      I used Jekyll as a simple framework so that I could host the site on GitHub Pages but I had to tweak some things in order to use Haml. Jekyll does work with Haml via plugins, but GitHub Pages doesn't support those plugins, so I wrote a Ruby module that does the markup conversion locally before committing the result to GitHub. The module also updates the site as I'm developing by working with Jekyll Serve. It reads all Haml files from the source directory and detects changes by comparing the file's modified time to that of the HTML file of the same name, if one exists, and does a system call for haml to convert the file. Jekyll Serve then regenerates the site.
-
-    %p
-      Check out the code in my
-      %a.footer__link{ href: "https://github.com/JeffBowne/new-homepage", target: "_blank"} GitHub Repository

@@ -1,43 +1,27 @@
 !!!
 %html
   %head
-    %script{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-123322988-1'}
-    :javascript
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-123322988-1');
-    %title Jeff Bowne
+    -# %script{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-123322988-1'}
+    -# :javascript
+    -#   window.dataLayer = window.dataLayer || [];
+    -#   function gtag(){dataLayer.push(arguments);}
+    -#   gtag('js', new Date());
+    -#   gtag('config', 'UA-123322988-1');
+    %title Faking
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width = device-width, initial-scale = 1, maximum-scale = 1' }
     %link{ rel: 'stylesheet', type: 'text/css', href: 'css/styles.css' }
     %link{ href: 'css/font-awesome.min.css', rel: 'stylesheet', type: 'text/css' }
     %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
-    %script{ src: 'animations.js' }
+    -# %script{ src: 'animations.js' }
     / %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' }
 
   %body#top
     .background
       %img{src: 'images/parts-bg.png', alt: 'background', class: 'background__image'}
 
-    = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
-
-    = Haml::Engine.new(File.read('generated_html/intro_area.html')).render
+    -# = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
 
     .divider-bar
       %i.divider-bar__icon.fa.fa-code.fa-3x
-    = Haml::Engine.new(File.read('generated_html/resume_area.html')).render
-
-    .divider-bar
-      %i.divider-bar__icon.fa.fa-code.fa-3x
-    = Haml::Engine.new(File.read('generated_html/animals_area.html')).render
-
-    .divider-bar
-      %i.divider-bar__icon.fa.fa-code.fa-3x
-    = Haml::Engine.new(File.read('generated_html/pedals_area.html')).render
-
-    .divider-bar
-      %i.divider-bar__icon.fa.fa-code.fa-3x
-    = Haml::Engine.new(File.read('generated_html/design_area.html')).render
-
-    = Haml::Engine.new(File.read('generated_html/footer.html')).render
+    -# = Haml::Engine.new(File.read('generated_html/resume_area.html')).render
