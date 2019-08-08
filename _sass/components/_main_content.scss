@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #MAIN-CONTENT
+\*------------------------------------*/
+
+.main-content {
+  padding-top: $spacing-unit--x4;
+  margin: 0 auto;
+  width: calc(100% - $spacing-unit--x2);
+  background: $background-color;
+
+  @include respond-to($medium-breakpoint) {
+    width: calc(100% - $spacing-unit--x4);
+    max-width: 900px;
+  }
+}

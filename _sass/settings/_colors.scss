@@ -2,21 +2,14 @@
     #COLORS
 \*------------------------------------*/
 
-$black:     #000000;
-$white:     #ffffff;
-$blue:      #39465b;
-$yellow:    #e2b000;
-$red:       #fb5c43;
-$green:     #75b391;
-$purple:    #9e8da7;
-$teal:      #016a7d;
-$shell:     #e6e6e6;
+$black:        #000000;
+$white:        #ffffff;
+$gray--dark:   #333333;
+
+
 
 /**
  * Global Functional Color Variables
  */
 
-$resume-color:     $yellow;
-$artwork-color:    $red;
-$design-color:     $green;
-$contact-color:    $purple;
+$background-color:    rgba($gray--dark, 0.9);

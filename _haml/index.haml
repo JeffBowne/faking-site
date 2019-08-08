@@ -17,11 +17,10 @@
     / %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' }
 
   %body#top
-    .background
-      %img{src: 'images/parts-bg.png', alt: 'background', class: 'background__image'}
+    %img{src: 'images/toplogo.png', alt: 'Faking logo.', class: 'masthead'}/
 
-    -# = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
+    = Haml::Engine.new(File.read('generated_html/main_content.html')).render
 
-    .divider-bar
-      %i.divider-bar__icon.fa.fa-code.fa-3x
+    -# .divider-bar
+      -# %i.divider-bar__icon.fa.fa-code.fa-3x
     -# = Haml::Engine.new(File.read('generated_html/resume_area.html')).render

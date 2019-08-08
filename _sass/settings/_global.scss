@@ -15,11 +15,12 @@ $wide-breakpoint:    1025px;
  * Global Spacing Units
  */
 
-$spacing-unit:            6px;
+$spacing-unit:            8px;
 $spacing-unit--x2:        round($spacing-unit * 2);
 $spacing-unit--x3:        round($spacing-unit * 3);
 $spacing-unit--x4:        round($spacing-unit * 4);
 $spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
+$spacing-unit--half:      round($spacing-unit / 2);
 
 /**
  * Global Border Radiuses
@@ -47,5 +48,16 @@ body {
   color: $white;
   font-size: $font-size;
   font-family: $font-family-primary;
-  background: $blue;
+  background: $black;
+  background-size: 100%;
+  background-image: url('../images/teethbanner.png');
+  background-repeat: no-repeat;
+}
+
+.masthead {
+  display: block;
+  z-index: 2;
+  margin: -30px auto;
+  max-width: 70%;
+  max-height: 250px;
 }

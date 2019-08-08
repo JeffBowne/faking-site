@@ -2,29 +2,4 @@
     #FOOTER
 \*------------------------------------*/
 
-.footer {
-  margin-top: 24px;
-  padding: 0 $spacing-unit $spacing-unit--x2;
-  text-align: center;
-  background: $black;
-  border-top: $border-thick $white;
-
-  @include respond-to($medium-breakpoint) {
-    margin-top: 100px;
-  }
-}
-
-  .footer__heading {
-    display: inline-block;
-    padding: 0 24px;
-    line-height: 0;
-    border-bottom: $border-thin $blue;
-  }
-
-  .footer__page-details {
-    font-size: $font-size-small;
-  }
-
-    .footer__link {
-      color: $white;
-    }
+.footer {}
