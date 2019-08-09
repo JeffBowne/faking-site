@@ -7,20 +7,25 @@
  * Breakpoint Widths
  */
 
-$small-breakpoint:   426px;
-$medium-breakpoint:  769px;
-$wide-breakpoint:    1025px;
+// $small-breakpoint:   426px;
+// $medium-breakpoint:  769px;
+// $wide-breakpoint:    1025px;
+
+$small-breakpoint:     400px;
+$medium-breakpoint:    600px;
+$wide-breakpoint:      800px;
+$x-wide-breakpoint:    1800px;
 
 /**
  * Global Spacing Units
  */
 
-$spacing-unit:            8px;
-$spacing-unit--x2:        round($spacing-unit * 2);
-$spacing-unit--x3:        round($spacing-unit * 3);
-$spacing-unit--x4:        round($spacing-unit * 4);
-$spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
-$spacing-unit--half:      round($spacing-unit / 2);
+// $spacing-unit:            8px;
+// $spacing-unit--x2:        round($spacing-unit * 2);
+// $spacing-unit--x3:        round($spacing-unit * 3);
+// $spacing-unit--x4:        round($spacing-unit * 4);
+// $spacing-unit--plus-half: round($spacing-unit + ($spacing-unit / 2));
+// $spacing-unit--half:      round($spacing-unit / 2);
 
 /**
  * Global Border Radiuses
@@ -41,23 +46,26 @@ $border-thick:       3px solid;
 /**
  * Global Styles
  */
+html {
+  font-size: 8px;
+}
 
 body {
   @include antialias;
   margin: 0;
-  color: $white;
-  font-size: $font-size;
+  color: $black;
+  font-size: 1.8rem;
   font-family: $font-family-primary;
   background: $black;
-  background-size: 100%;
-  background-image: url('../images/teethbanner.png');
-  background-repeat: no-repeat;
+  // background-size: 100%;
+  // background-image: url('../images/teethbanner.png');
+  // background-repeat: no-repeat;
 }
 
-.masthead {
-  display: block;
-  z-index: 2;
-  margin: -30px auto;
-  max-width: 70%;
-  max-height: 250px;
+.toplogo {
+    display: block;
+    z-index: 2;
+    margin: -30px auto;
+    max-width: 70%;
+    max-height: 250px;
 }

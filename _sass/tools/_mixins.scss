@@ -3,14 +3,29 @@
 \*------------------------------------*/
 
 /**
- * respond-to
- *
- * Used to create a media query within a Sass selector. By default this mixin
- * also defines basic print styles.
+ * Media Query Mixins
  */
 
-@mixin respond-to($breakpoint) {
-  @media screen and (min-width: $breakpoint), print {
+@mixin large-mobile-up {
+  @media screen and (min-width: $small-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: $medium-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: $wide-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-screen-up {
+  @media screen and (min-width: $x-wide-breakpoint) {
     @content;
   }
 }
@@ -21,24 +36,25 @@
  * Used to vertically and horizontally center elements within their parent.
  */
 
-@mixin center($to: 'both') {
+@mixin center-horizontal {
   position: absolute;
+  top: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 
-  @if ($to == 'both') {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+@mixin center-vertical {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  transform: translate(0, -50%);
+}
 
-  @else if ($to == 'horizontal') {
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  @else if ($to == 'vertical') {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+@mixin center-both {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /**

@@ -3,13 +3,20 @@
 \*------------------------------------*/
 
 .main-content {
-  padding-top: $spacing-unit--x4;
-  margin: 0 auto;
-  width: calc(100% - $spacing-unit--x2);
+  padding: 0.5rem 2rem 2rem;
+  margin: 2rem auto;
+  width: calc(100% - 4rem);
   background: $background-color;
 
-  @include respond-to($medium-breakpoint) {
-    width: calc(100% - $spacing-unit--x4);
+  @include tablet-up {
+    width: calc(100% - 8rem);
     max-width: 900px;
   }
 }
+
+	.main-content__masthead {
+    display: block;
+    width: 400px;
+    max-width: 80%;
+    margin-bottom: 0.5rem;
+	}

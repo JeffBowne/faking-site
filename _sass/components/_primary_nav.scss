@@ -2,4 +2,52 @@
     #PRIMARY-NAV
 \*------------------------------------*/
 
-.primary-nav {}
+
+.primary-nav {
+  margin: 0 0 2rem;
+  padding: 0;
+  font-family: $font-family-secondary;
+  border-top: $border-thick $black;
+  border-bottom: $border-thick $black;
+  list-style: none;
+}
+
+
+  .primary-nav__item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    transition: padding-bottom 3000ms, background 3000ms;
+
+    &:not(:last-of-type):after {
+      @include center-vertical;
+      content: '';
+      right: -1px;
+      height: 2.5rem;
+      width: 2px;
+      background: $black;
+    }
+  }
+
+    .primary-nav__item-link {
+      display: inline-block;
+      padding: 1.5rem 2rem;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      color: $black;
+      text-decoration: none;
+      transition: color 3000ms, text-shadow 3000ms;
+      // border-right: solid $black 2px;
+
+      @include large-mobile-up {
+      }
+
+      &:hover {
+        transition: color 300ms, text-shadow 300ms;
+      }
+
+      &:focus {
+        transition: color 100ms, text-shadow 100ms;
+        outline: none;
+      }
+    }

@@ -2,9 +2,10 @@
     #COLORS
 \*------------------------------------*/
 
-$black:        #000000;
-$white:        #ffffff;
-$gray--dark:   #333333;
+$black:          #121110;
+$white:          #fbfbf7;
+$gray--dark:     lighten($black, 20);
+$gray--light:    lighten($black, 70);
 
 
 
@@ -12,4 +13,4 @@ $gray--dark:   #333333;
  * Global Functional Color Variables
  */
 
-$background-color:    rgba($gray--dark, 0.9);
+$background-color:    $gray--light;

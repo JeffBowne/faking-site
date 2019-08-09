@@ -22,12 +22,12 @@ $frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
     vertical-align: middle;
     overflow: hidden;
 
-    @include respond-to($small-breakpoint) {
+    @include large-mobile-up {
       width: 26vw;
       height: 26vw;
     }
 
-    @include respond-to($medium-breakpoint) {
+    @include tablet-up {
       width: 18vw;
       height: 18vw;
       max-width: 250px;
@@ -54,15 +54,15 @@ $frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
   }
 
     .gallery__image {
-      @include center($to: 'both');
+      @include center-both;
       max-width: 250px;
       pointer-events: none;
 
-      @include respond-to($small-breakpoint) {
+      @include large-mobile-up {
         max-width: 300px;
       }
 
-      @include respond-to($medium-breakpoint) {
+      @include tablet-up {
         max-width: 400px;
       }
 

@@ -7,7 +7,7 @@
     -#   function gtag(){dataLayer.push(arguments);}
     -#   gtag('js', new Date());
     -#   gtag('config', 'UA-123322988-1');
-    %title Faking
+    %title FAKING - Philly Noise Rock
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width = device-width, initial-scale = 1, maximum-scale = 1' }
     %link{ rel: 'stylesheet', type: 'text/css', href: 'css/styles.css' }
@@ -17,9 +17,10 @@
     / %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' }
 
   %body#top
-    %img{src: 'images/toplogo.png', alt: 'Faking logo.', class: 'masthead'}/
+    .main-content
+      %img{src: 'images/htlogo.png', alt: 'Faking logo.', class: 'main-content__masthead'}/
 
-    = Haml::Engine.new(File.read('generated_html/main_content.html')).render
+      = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
 
     -# .divider-bar
       -# %i.divider-bar__icon.fa.fa-code.fa-3x
