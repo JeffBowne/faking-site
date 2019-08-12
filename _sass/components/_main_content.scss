@@ -2,11 +2,18 @@
     #MAIN-CONTENT
 \*------------------------------------*/
 
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .main-content {
   padding: 0.5rem 2rem 2rem;
   margin: 2rem auto;
   width: calc(100% - 4rem);
   background: $background-color;
+  opacity: 0;
+  animation: fade-in 300ms ease-in 100ms forwards;
 
   @include tablet-up {
     width: calc(100% - 8rem);
@@ -14,9 +21,15 @@
   }
 }
 
-	.main-content__masthead {
-    display: block;
-    width: 400px;
-    max-width: 80%;
-    margin-bottom: 0.5rem;
-	}
+  .main-content__page-header {
+  	display: flex;
+  	flex-direction: column;
+  }
+
+		.main-content__masthead {
+	    display: block;
+	    width: 400px;
+	    max-width: 80%;
+	    margin-bottom: 0.5rem;
+	    align-self: flex-end;
+		}

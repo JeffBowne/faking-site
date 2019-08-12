@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #RELEASES
+\*------------------------------------*/
+
+.releases {
+    margin-top: 3rem;
+    // display: flex;
+    // justify-content: space-around;
+}
+
+    .releases__player {
+        display: block;
+        width: 475px;
+        height: 472px;
+        margin: 0 auto;
+        border: 0;
+    }
+
+    .releases_link {}
+
+        .releases__cover {
+            width: 20vw;
+        }
