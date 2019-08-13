@@ -12,8 +12,6 @@
   margin: 0.5rem auto;
   width: calc(100% - 3rem);
   background: $background-color;
-  opacity: 0;
-  animation: fade-in 300ms ease-in 100ms forwards;
 
   @include tablet-up {
     width: calc(100% - 8rem);
@@ -22,15 +20,31 @@
   }
 }
 
-  .main-content__page-header {
-  	display: flex;
-  	flex-direction: column;
+  .main-content__container {
+    opacity: 0;
+    animation: fade-in 300ms ease-in 100ms forwards;
   }
 
-		.main-content__masthead {
-	    display: block;
-	    width: 400px;
-	    max-width: 80%;
-	    margin-bottom: 0.5rem;
-	    align-self: flex-end;
-		}
+
+    .main-content__page-header {
+    	display: flex;
+    	flex-direction: column;
+    }
+
+      .main-content__home-link {
+        width: 400px;
+        max-width: 80%;
+        margin-bottom: 0.5rem;
+        align-self: flex-end;
+        transition: opacity 200ms;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+    		.main-content__masthead {
+    	    display: block;
+    	    max-width: 100%;
+    	    align-self: flex-end;
+    		}

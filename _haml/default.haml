@@ -7,7 +7,7 @@
     -#   function gtag(){dataLayer.push(arguments);}
     -#   gtag('js', new Date());
     -#   gtag('config', 'UA-123322988-1');
-    %title {{ title }}
+    %title {{ page.title }}
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width = device-width, initial-scale = 1, maximum-scale = 1' }
     %link{ rel: 'stylesheet', type: 'text/css', href: 'css/styles.css' }
@@ -18,8 +18,10 @@
 
   %body#top
     .main-content
-      .main-content__page-header
-        %img{ class: 'main-content__masthead', src: 'images/htlogo.png', alt: 'Faking logo.' }
-        = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
+      .main-content__container
+        .main-content__page-header
+          %a.main-content__home-link{href: '/'}
+            %img.main-content__masthead{ src: 'images/htlogo.png', alt: 'Faking logo.' }
+          = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
 
-      {{ content }}
+        {{ content }}
