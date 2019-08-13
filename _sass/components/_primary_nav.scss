@@ -10,44 +10,45 @@
   border-top: $border-thick $black;
   border-bottom: $border-thick $black;
   list-style: none;
-  background-image: linear-gradient(to right, $gray--light, rgba($gray--dark, 0.3), $gray--light);
+  display: flex;
+  align-items: center;
+
+  @include tablet-up {
+    justify-content: flex-start;
+  }
+  // background-image: linear-gradient(to right, $gray--light, rgba($gray--dark, 0.3), $gray--light);
 }
 
   .primary-nav__item {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    transition: padding-bottom 3000ms, background 3000ms;
+    flex-grow: 1;
 
-    &:not(:last-of-type):after {
-      @include center-vertical;
-      content: '';
-      right: -1px;
-      height: 2.5rem;
-      width: 2px;
-      background: $black;
+    @include tablet-up {
+      flex-grow: 0;
     }
   }
 
+  .primary-nav__divider {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2px;
+    background: $black;
+  }
+
     .primary-nav__item-link {
-      display: inline-block;
-      padding: 1.5rem 2rem;
+      display: block;
+      padding: 1.5rem 0;
       height: 20px;
       font-size: 2.5rem;
       line-height: 2.4rem;
       color: $black;
       text-decoration: none;
-      transition: color 3000ms, text-shadow 3000ms;
-
-      @include large-mobile-up {
-      }
-
-      &:hover {
-        transition: color 300ms, text-shadow 300ms;
-      }
+      text-align: center;
 
       &:focus {
-        transition: color 100ms, text-shadow 100ms;
         outline: none;
+      }
+
+      @include tablet-up {
+        padding: 1.5rem 2rem;
       }
     }

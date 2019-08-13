@@ -4,20 +4,61 @@
 
 .releases {
     margin-top: 3rem;
-    // display: flex;
-    // justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-    .releases__player {
-        display: block;
-        width: 475px;
-        height: 472px;
-        margin: 0 auto;
-        border: 0;
+    .releases__cover {
+        position: relative;
+        width: 40vw;
+        height: 40vw;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 2rem 1rem;
     }
 
-    .releases_link {}
+    .releases__cover--gdc {
+        background: url('../images/covers/gc-cover-small.jpg');
+        background-size: 100%;
+    }
 
-        .releases__cover {
-            width: 20vw;
+    .releases__cover--vices {
+        background: url('../images/covers/vices-cover-small.jpg');
+        background-size: 100%;
+    }
+
+    .releases__cover--ghd {
+        background: url('../images/covers/ghd-cover-small.jpg');
+        background-size: 100%;
+    }
+
+    .releases__cover--unsane {
+        background: url('../images/covers/unsane-cover-small.jpg');
+        background-size: 100%;
+    }
+
+        .releases__cover-link {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            @include tablet-up {
+                display: none;
+            }
+        }
+
+        .releases__player {
+            display: none;
+            width: 100%;
+            height: 100%;
+
+            border: 0;
+
+            @include tablet-up {
+                display: block;
+            }
         }
