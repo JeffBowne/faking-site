@@ -28,9 +28,13 @@ theme:
 plugins:
   - jekyll-feed
 
-haml_partials_dir: '_haml/partials'
 haml_dir: '_haml'
+haml_partials_dir: '_haml/partials'
+haml_pages_dir: '_haml/pages/'
+layouts_dir: '_layouts'
 generated_html_dir: 'generated_html'
+project_dir: ''
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

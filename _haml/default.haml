@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    -# %script{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-123322988-1'}
+    -# :javascript
+    -#   window.dataLayer = window.dataLayer || [];
+    -#   function gtag(){dataLayer.push(arguments);}
+    -#   gtag('js', new Date());
+    -#   gtag('config', 'UA-123322988-1');
+    %title {{ title }}
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'viewport', content: 'width = device-width, initial-scale = 1, maximum-scale = 1' }
+    %link{ rel: 'stylesheet', type: 'text/css', href: 'css/styles.css' }
+    %link{ href: 'css/font-awesome.min.css', rel: 'stylesheet', type: 'text/css' }
+    %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
+    -# %script{ src: 'animations.js' }
+    / %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' }
+
+  %body#top
+    .main-content
+      .main-content__page-header
+        %img{ class: 'main-content__masthead', src: 'images/htlogo.png', alt: 'Faking logo.' }
+        = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
+
+      {{ content }}
