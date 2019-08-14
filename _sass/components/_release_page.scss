@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #RELEASE-PAGE
+\*------------------------------------*/
+
+
+.release-page {}
+
+  .release-page__heading {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  .release-page__cover {
+    display: block;
+    width: calc(100% - 6rem);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+
+  .release-page__player {
+    display: block;
+    margin: 2rem auto;
+    height: 300px;
+    width: 100%;
+    max-width: 500px;
+    border: 0;
+  }
+
+
+  .release-page__info {}
+
+    .release-page__date {
+      margin: 0;
+    }
+
+    .release-page__personel {
+      margin: 0;
+    }
+
+    .release-page__details {
+      margin: 0;
+    }
+
+    .release-page__cta {
+      margin: 0;
+    }
+
+      .releases__dl-link {}

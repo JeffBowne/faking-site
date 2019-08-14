@@ -3,7 +3,6 @@
 \*------------------------------------*/
 
 .releases {
-    margin-top: 3rem;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -16,49 +15,63 @@
         max-width: 300px;
         max-height: 300px;
         margin: 2rem 1rem;
+
+        @include tablet-up {
+            height: auto;
+            max-height: none;
+        }
     }
 
     .releases__cover--gdc {
         background: url('../images/covers/gc-cover-small.jpg');
         background-size: 100%;
+        background-repeat: no-repeat;
     }
 
     .releases__cover--vices {
         background: url('../images/covers/vices-cover-small.jpg');
         background-size: 100%;
+        background-repeat: no-repeat;
     }
 
     .releases__cover--ghd {
         background: url('../images/covers/ghd-cover-small.jpg');
         background-size: 100%;
+        background-repeat: no-repeat;
     }
 
     .releases__cover--unsane {
         background: url('../images/covers/unsane-cover-small.jpg');
         background-size: 100%;
+        background-repeat: no-repeat;
     }
-
-        .releases__cover-link {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            @include tablet-up {
-                display: none;
-            }
-        }
 
         .releases__player {
             display: none;
-            width: 100%;
-            height: 100%;
+            width: 300px;
+            height: 300px;
 
             border: 0;
 
             @include tablet-up {
                 display: block;
+            }
+        }
+
+        .releases__cover-link {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            color: $blue;
+            font-size: 0;
+            font-weight: bold;
+
+            @include tablet-up {
+                position: relative;
+                margin: 1rem 0 0;
+                font-size: 2rem;
             }
         }

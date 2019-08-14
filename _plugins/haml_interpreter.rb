@@ -5,6 +5,8 @@ module HamlInterpreter
       partials_destination = site.config['generated_html_dir']
       pages_source = site.config['haml_pages_dir']
       pages_destination = site.config['project_dir']
+      layouts_source = site.config['haml_dir']
+      layouts_destination = site.config['layouts_dir']
       layout_haml = layout_source_path(site)
       layout_destination = layout_destination_path(site)
       something_updated = false
@@ -24,6 +26,14 @@ module HamlInterpreter
         if something_updated || changes_made?(page_haml, page_html)
           convert_haml(page_haml, page_html)
           something_updated = true
+        end
+      end
+
+      Dir.glob(File.join(layouts_source, '*.haml')).each do |page_haml|
+        page_html = page_haml.sub(layouts_source, layouts_destination).sub(/\.haml$/i, '.html')
+
+        if something_updated || changes_made?(page_haml, page_html)
+          convert_haml(page_haml, page_html)
         end
       end
 
