@@ -69,3 +69,12 @@ body {
     max-width: 70%;
     max-height: 250px;
 }
+
+a {
+  color: $black;
+  transition-duration: 200ms;
+
+  &:hover {
+    color: $blue;
+  }
+}

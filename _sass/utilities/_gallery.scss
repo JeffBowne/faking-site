@@ -2,76 +2,49 @@
     #GALLERY
 \*------------------------------------*/
 
-$frame-zoom-active-bg-color:    rgba(11, 11, 11, 0.8);
-
-@keyframes frame-zoom-fade-in {
-  0% { opacity: 0; }
+@keyframes frame-fade-in {
+    0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-
-.gallery {}
+.gallery__overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: rgba($black, 0.5);
+  opacity: 0;
+  overflow: auto;
+  animation: frame-fade-in 200ms ease-out forwards;
+}
 
   .gallery__frame {
-    display: inline-block;
-    position: relative;
-    margin: 2%;
-    width: 40vw;
-    height: 40vw;
-    border-radius: $border-radius-round;
-    vertical-align: middle;
-    overflow: hidden;
-
-    @include large-mobile-up {
-      width: 26vw;
-      height: 26vw;
-    }
-
-    @include tablet-up {
-      width: 18vw;
-      height: 18vw;
-      max-width: 250px;
-      max-height: 250px;
-    }
-  }
-
-  .gallery__frame--zoom {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    margin: 0;
-    width: auto;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    background: $frame-zoom-active-bg-color;
-    border-radius: 0;
+    @include center-horizontal;
+    z-index: 1;
+    margin: 100px 0;
+    padding-top: calc(98vw * 0.563 + 8rem);
+    width: 98vw;
+    background: $gray--light;
+    border-radius: $border-radius-small;
     opacity: 0;
-    animation: frame-zoom-fade-in 200ms ease-out forwards;
-  }
+    animation: frame-fade-in 400ms ease-out 200ms forwards;
 
-    .gallery__image {
-      @include center-both;
-      max-width: 250px;
-      pointer-events: none;
-
-      @include large-mobile-up {
-        max-width: 300px;
-      }
-
-      @include tablet-up {
-        max-width: 400px;
-      }
-
-      .gallery__frame--zoom & {
-        max-width: 90%;
-        max-height: 90%;
-        opacity: 0;
-        animation: frame-zoom-fade-in 400ms ease-out 200ms forwards;
-      }
+    @include  tablet-up {
+      padding-top: calc(88vw * 0.563 + 8rem);
+      width: 88vw;
     }
 
-
+    @include  desktop-up {
+      padding-top: calc(800px * 0.563 + 8rem);
+      width: 800px;
+    }
+  }
+    .gallery__framed-image {
+      @include center-horizontal;
+      display: block;
+      top: 4rem;
+      width: 100%;
+    }

@@ -13,7 +13,6 @@
     %link{ rel: 'stylesheet', type: 'text/css', href: 'css/styles.css' }
     %link{ href: 'css/font-awesome/all.min.css', rel: 'stylesheet', type: 'text/css' }
     %script{ src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
-    -# %script{ src: 'animations.js' }
     / %link{ rel: 'stylesheet', type: 'text/css', href: '{{ "/css/styles.css" | relative_url }}' }
 
   %body#top
@@ -33,6 +32,8 @@
               %img.main-content__masthead{src: 'images/htlogo.png', alt: 'Faking logo.'}
         = Haml::Engine.new(File.read('generated_html/primary_nav.html')).render
 
-        %img.main-content__photo{src: 'images/live-double-gray-thin.jpeg', alt: 'Faking live'}
+        %img.main-content__photo.main-content__photo--thin{src: 'images/live-double-gray-thin.jpeg', alt: 'Faking live'}
 
         {{ content }}
+
+    %script{ src: 'image-gallery.js' }

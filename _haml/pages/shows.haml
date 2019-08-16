@@ -2,5 +2,21 @@
 layout: default
 title: Faking Shows
 \---
-.shows
-  shows
+.shows{ data:{gallery:''} }
+
+  %h2.shows__heading Live Shows
+
+  .shows__row
+    %button.shows__image-button{ data:{gallery_image_button:''} }
+      %img.shows__photo{src: 'images/live/livespazz.png', alt: 'Faking live.'}
+    %button.shows__image-button{ data:{gallery_image_button:''} }
+      %img.shows__photo{src: 'images/live/livems.jpg', alt: 'Faking live.'}
+    %button.shows__image-button{ data:{gallery_image_button:''} }
+      %img.shows__photo{src: 'images/live/liveny.png', alt: 'Faking live.'}
+  .shows__row
+    %button.shows__image-button{ data:{gallery_image_button:''} }
+      %img.shows__photo{src: 'images/live/livekfn.jpg', alt: 'Faking live.'}
+    %button.shows__image-button{ data:{gallery_image_button:''} }
+      %img.shows__photo{src: 'images/live/livehide.png', alt: 'Faking live.'}
+    %button.shows__image-button{ data:{gallery_image_button:''} }
+      %img.shows__photo{src: 'images/live/livecen.jpg', alt: 'Faking live.'}

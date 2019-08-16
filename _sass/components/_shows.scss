@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #SHOWS
+\*------------------------------------*/
+
+
+.shows {}
+
+  .shows__heading {
+    text-align: center;
+  }
+
+  .shows__row {
+  	display: flex;
+    margin-top: 2rem;
+  }
+
+    .shows__image-button {
+      width: 33.3%;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      transition-duration: 300ms;
+
+      &:hover {
+        z-index: 1000;
+        box-shadow: -5px -5px 80px 80px $mist-color, 5px 5px 80px 80px $mist-color,;
+      }
+    }
+
+      .shows__photo {
+        width: 100%;
+        display: block;
+        pointer-events: none;
+      }
