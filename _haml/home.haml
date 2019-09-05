@@ -36,3 +36,5 @@
         %img.main-content__photo{src: 'images/live-double-gray.jpeg', alt: 'Faking live'}
 
         {{ content }}
+
+    = Haml::Engine.new(File.read('generated_html/footer.html')).render

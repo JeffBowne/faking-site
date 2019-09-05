@@ -3,22 +3,54 @@ layout: default
 title: Faking  Music
 \---
 .music
+
+  .music__external-links
+    %a.music__external-link{ href: 'https://faking.bandcamp.com/', target: '_blank'}
+      %i.fab.fa-bandcamp
+      %span.music__external-link-text Visit our Bandcamp
+
+    %a.music__external-link{ href: 'spotify:artist:2fm80VCrVlWczPKi5HzoB0', target: '_blank'}
+      %i.fab.fa-spotify
+      %span.music__external-link-text Listen on Spotify
+
+
+    %a.music__external-link{ href: 'https://www.discogs.com/artist/3451742-Faking-2', target: '_blank'}
+      %i.fas.fa-compact-disc
+      %span.music__external-link-text View our Discogs
+
+
   .music__release.music__release--gdc
     %a.music__cover-link{href: '/release-goddamn-cowards'}
       %img.music__cover{src: 'images/covers/gc-cover-small.jpg', alt: 'Faking, Goddam Cowards album.'}
-      %p Goddamn Cowards
+    .music__release-info
+      %a.music__title-link{href: '/release-goddamn-cowards'}
+        %h2.music__title Goddamn Cowards
+      %p.music__details a CD released in 2016
+      %p.music__details by Reptilian Records
 
   .music__release.music__release--vices
     %a.music__cover-link{href: '/release-vices'}
       %img.music__cover{src: 'images/covers/vices-cover-small.jpg', alt: 'Faking, Vices seven inch.'}
-      %p Vices
+    .music__release-info
+      %a.music__title-link{href: '/release-vices'}
+        %h2.music__title Vices
+      %p.music__details a 7" released in 2014
+      %p.music__details by Reptilian Records
 
   .music__release.music__release--ghd
     %a.music__cover-link{href: '/release-demo'}
       %img.music__cover{src: 'images/covers/ghd-cover-small.jpg', alt: 'Faking, Greatest Hits Demo.'}
-      %p Greatest Hits Demo
+    .music__release-info
+      %a.music__title-link{href: '/release-demo'}
+        %h2.music__title Greatest Hits Demo
+      %p.music__details a cassette released in 2013
+      %p.music__details by V4 Records
 
   .music__release.music__release--unsane
     %a.music__cover-link{href: '/release-unsane'}
       %img.music__cover{src: 'images/covers/unsane-cover-small.jpg', alt: 'Faking, Unsane tribute comps.'}
-      %p A Tribute To Unsane
+    .music__release-info
+      %a.music__title-link{href: '/release-unsane'}
+        %h2.music__title A Tribute To Unsane
+      %p.music__details a track released in 2017
+      %p.music__details by Antena Krzyku Records

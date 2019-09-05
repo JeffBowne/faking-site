@@ -3,4 +3,80 @@
 \*------------------------------------*/
 
 
-.music {}
+.music {
+  @include tablet-up {
+    padding-left: 4rem;
+  }
+}
+
+  .music__external-links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+    .music__external-link {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+
+      i {
+        padding: 1px;
+        font-size: 5rem;
+      }
+    }
+
+      .music__external-link-text {
+        margin-left: 1rem;
+        font-size: 2rem;
+        text-decoration: underline;
+      }
+
+  .music__release {
+    display: flex;
+    margin: 4rem 0;
+
+    @include tablet-up {
+      margin: 5rem 0;
+    }
+  }
+
+  .music__release--gdc {}
+
+  .music__release--vices {}
+
+  .music__release--ghd {}
+
+  .music__release--unsane {}
+
+    .music__cover-link {
+
+      &:hover {
+        box-shadow: -4px -4px 40px 4px $blue-mist-color, 4px 4px 40px 4px $blue-mist-color;
+      }
+    }
+
+      .music__cover {
+        display: block;
+        width: 10rem;
+
+        @include tablet-up {
+          width: 15rem;
+        }
+      }
+
+    .music__release-info {
+      display: flex;
+      margin-left: 2rem;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+      .music__title-link {}
+
+        .music__title {
+          margin-bottom: 0.5rem;
+        }
+
+      .music__details {
+        margin: 0;
+      }
