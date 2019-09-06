@@ -20,6 +20,16 @@
   }
 }
 
+.main-content--home {}
+
+.main-content--default {
+  margin: 0.5rem auto;
+
+  @include tablet-up {
+    margin: 2rem auto;
+  }
+}
+
   .main-content__container {
     opacity: 0;
     animation: fade-in 300ms ease-in 100ms forwards;
