@@ -24,8 +24,9 @@
   .gallery__frame {
     @include center-both;
     z-index: 1;
-    padding-top: calc(98vw * 0.563 + 8rem);
     width: 98vw;
+    margin: 0 0 100px;
+    padding-top: calc(98vw * 0.563 + 8rem);
     background: $gray--light;
     border-radius: $border-radius-small;
     opacity: 0;
