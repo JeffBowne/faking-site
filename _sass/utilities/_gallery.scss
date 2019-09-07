@@ -22,14 +22,14 @@
 }
 
   .gallery__frame {
-    @include center-horizontal;
+    @include center-both;
     z-index: 1;
-    margin: 100px 0;
     padding-top: calc(98vw * 0.563 + 8rem);
     width: 98vw;
     background: $gray--light;
     border-radius: $border-radius-small;
     opacity: 0;
+    box-shadow: -5px -5px 160px 80px rgba($black, 0.4), 5px 5px 160px 80px rgba($black, 0.4);
     animation: frame-fade-in 400ms ease-out 200ms forwards;
 
     @include  tablet-up {

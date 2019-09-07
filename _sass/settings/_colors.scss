@@ -2,9 +2,9 @@
     #COLORS
 \*------------------------------------*/
 
-$black:          #121110;
+$black:          #121111;
 $white:          #fbfbf7;
-$gray--dark:     lighten($black, 20);
+$gray--dark:     lighten($black, 10);
 $gray--light:    lighten($black, 70);
 $blue:           #3F8EF2;
 
@@ -14,5 +14,5 @@ $blue:           #3F8EF2;
  */
 
 $background-color:    $gray--light;
-$mist-color: rgba($gray--light, 0.2);
+$mist-color: rgba($gray--light, 0.3);
 $blue-mist-color: rgba($blue, 0.5);
