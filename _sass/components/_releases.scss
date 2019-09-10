@@ -27,8 +27,8 @@
       padding-top: 60vw;
 
       @include tablet-up {
-        width: 400px;
-        padding-top: 400px;
+        width: 350px;
+        padding-top: 350px;
       }
     }
 
@@ -46,7 +46,7 @@
         }
 
         @include tablet-up {
-          width: 400px;
+          width: 350px;
         }
       }
 
