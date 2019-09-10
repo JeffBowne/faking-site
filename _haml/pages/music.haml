@@ -13,20 +13,18 @@ title: Faking  Music
       %i.fab.fa-spotify
       %span.music__external-link-text Listen on Spotify
 
-
     %a.music__external-link{ href: 'https://www.discogs.com/artist/3451742-Faking-2', target: '_blank'}
       %i.fas.fa-compact-disc
       %span.music__external-link-text View on Discogs
 
-
-  -# .music__release.music__release--gdc
-  -#   %a.music__cover-link{href: '/release-no-comfort'}
-  -#     %img.music__cover{src: 'images/covers/nc-cover-small.jpg', alt: 'Faking, No Comfort album.'}
-  -#   .music__release-info
-  -#     %a.music__title-link{href: '/release-no-comfort'}
-  -#       %h2.music__title No Comfort
-  -#     %p.music__details a forthcoming 12" + CD
-  -#     %p.music__details by Slugthrower Records
+  .music__release.music__release--nc
+    %a.music__cover-link{href: '/release-no-comfort'}
+      %img.music__cover{src: 'images/covers/nc-cover-small.jpg', alt: 'Faking, No Comfort album.'}
+    .music__release-info
+      %a.music__title-link{href: '/release-no-comfort'}
+        %h2.music__title No Comfort
+      %p.music__details a forthcoming LP + CD
+      %p.music__details by Slugthrower Records
 
   .music__release.music__release--gdc
     %a.music__cover-link{href: '/release-goddamn-cowards'}
