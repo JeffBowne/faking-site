@@ -21,6 +21,7 @@
       margin: 0;
       cursor: pointer;
       transition: box-shadow 400ms, transform 400ms;
+      border-radius: 200px;
 
       &:hover:not(:focus) {
         z-index: 1000;

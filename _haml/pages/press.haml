@@ -41,5 +41,20 @@ title: Faking Press
   .press__write-up
     %a.press__link{ href: 'http://www.noecho.net/lists/10-philly-bands-not-being-included-in-the-best-punk-articles-but-should-be' }
       %i.far.fa-newspaper
-      %strong No Echo
-      %span - 10 Philly Bands... by Mike McGinnis (Fight Amp)
+      %span
+        %strong No Echo
+        %span - 10 Philly Bands... by Mike McGinnis (Fight Amp)
+
+  .press__gallery{ data:{press_gallery:''} }
+    %h2.press__gallery-instructions
+      Click one of these images for full size hi-res press photos:
+    %button.press__image-button{ data:{press_gallery_image_button:''} }
+      %img.press__photo{src: 'images/press/thin-faking1.jpg', alt: 'Faking', data:{image:'images/press/faking1.jpg'}}
+    %button.press__image-button{ data:{press_gallery_image_button:''} }
+      %img.press__photo{src: 'images/press/thin-faking3.jpg', alt: 'Faking', data:{image:'images/press/faking3.jpg'}}
+    %button.press__image-button{ data:{press_gallery_image_button:''} }
+      %img.press__photo{src: 'images/press/thin-faking2.jpg', alt: 'Faking', data:{image:'images/press/faking2.jpg'}}
+    %button.press__image-button{ data:{press_gallery_image_button:''} }
+      %img.press__photo{src: 'images/press/thin-faking4.jpg', alt: 'Faking', data:{image:'images/press/faking4.jpg'}}
+
+%script{ src: 'press-gallery.js' }

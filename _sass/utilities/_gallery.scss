@@ -25,6 +25,7 @@
     @include center-both;
     z-index: 1;
     width: 98vw;
+    max-width: 800px;
     margin: 0 0 100px;
     padding-top: calc(98vw * 0.563 + 8rem);
     background: $gray--light;
@@ -40,7 +41,6 @@
 
     @include  desktop-up {
       padding-top: calc(800px * 0.563 + 8rem);
-      width: 800px;
     }
   }
     .gallery__framed-image {

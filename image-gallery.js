@@ -16,7 +16,7 @@ var imageGallery = (function () {
   };
 
   var createOverlay = function() {
-    let overlay = d.createElement("div");
+    let overlay = d.createElement('div');
 
     overlay.setAttribute('class', 'gallery__overlay');
 
@@ -24,7 +24,7 @@ var imageGallery = (function () {
   };
 
   var createFrame = function() {
-    let frame = d.createElement("div");
+    let frame = d.createElement('div');
 
     frame.setAttribute('class', 'gallery__frame');
 
@@ -32,10 +32,10 @@ var imageGallery = (function () {
   };
 
   var createFramedImage = function(image) {
-    let framedImage = d.createElement("img");
+    let framedImage = d.createElement('img');
 
     framedImage.setAttribute('class', 'gallery__framed-image');
-    framedImage.src = image.src;
+    framedImage.src = image.dataset.image;
     framedImage.alt = image.alt;
 
     return framedImage;
@@ -57,9 +57,7 @@ var imageGallery = (function () {
 
   var handleImageClick = function(e) {
     let imageButton = e.target;
-                                                                console.log('boom this got clicked ', imageButton );
     let image = imageButton.querySelector('img');
-                                                                console.log('boom ', image );
 
     renderFrame(image);
     window.addEventListener('keydown', handleClose);
@@ -67,11 +65,9 @@ var imageGallery = (function () {
 
   var setupImages = function() {
     let imageButtons = d.querySelectorAll('[data-gallery-image-button]');
-                                                                console.log('boom button ', imageButtons );
 
     imageButtons.forEach((i) => {
       i.addEventListener('click', handleImageClick);
-                                                                console.log('boom button YES ', i );
     });
   };
 
