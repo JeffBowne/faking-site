@@ -45,6 +45,11 @@
 
     .shows__event {
       margin-top: 2rem;
+      // font-weight: 400;
+    }
+
+    .shows__event--past {
+      opacity: 0.4;
     }
 
       .shows__date {}
